@@ -8,34 +8,44 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: {
-                    50: '#f0f9ff',
-                    100: '#e0f2fe',
-                    200: '#bae6fd',
-                    300: '#7dd3fc',
-                    400: '#38bdf8',
-                    500: '#0ea5e9',
-                    600: '#0284c7',
-                    700: '#0369a1',
-                    800: '#075985',
-                    900: '#0c4a6e',
+                primary: '#2e3e44', // Dark teal
+                secondary: '#cad5d8', // Light gray-blue
+                // Legacy colors as fallbacks
+                blue: {
+                    600: '#2e3e44', // Map to primary for compatibility
                 },
-                secondary: {
-                    50: '#fdf4ff',
-                    100: '#fae8ff',
-                    200: '#f5d0fe',
-                    300: '#f0abfc',
-                    400: '#e879f9',
-                    500: '#d946ef',
-                    600: '#c026d3',
-                    700: '#a21caf',
-                    800: '#86198f',
-                    900: '#701a75',
+                gray: {
+                    50: '#f8f9fa',
+                    100: '#f1f3f5',
+                    200: '#e9ecef',
+                    300: '#dee2e6',
+                    400: '#ced4da',
+                    500: '#adb5bd',
+                    600: '#868e96',
+                    700: '#495057',
+                    800: '#343a40',
+                    900: '#212529',
                 },
             },
             fontFamily: {
-                sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
-                serif: ['var(--font-merriweather)', 'Merriweather', 'serif'],
+                mono: ['var(--font-space-mono)', 'Space Mono', 'monospace'],
+                sans: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
+                heading: ['var(--font-space-mono)', 'Space Mono', 'monospace'],
+                body: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
+            },
+            backgroundColor: {
+                'light': '#cad5d8',
+                'dark': '#2e3e44',
+            },
+            textColor: {
+                'light': '#cad5d8',
+                'dark': '#2e3e44',
+            },
+            letterSpacing: {
+                'widest': '0.2em',
+            },
+            spacing: {
+                '128': '32rem',
             },
         },
     },

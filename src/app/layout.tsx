@@ -1,19 +1,20 @@
 import React from 'react';
 import type { Metadata } from "next";
-import { Inter, Merriweather } from "next/font/google";
+import { Space_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
-
-const merriweather = Merriweather({
+const spaceMono = Space_Mono({
   weight: ["400", "700"],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-merriweather",
+  variable: "--font-space-mono",
+});
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -28,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${merriweather.variable} antialiased`}>
+    <html lang="en" className={`scroll-smooth ${spaceMono.variable} ${poppins.variable}`}>
+      <body className="antialiased bg-light text-dark font-body">
         {children}
       </body>
     </html>

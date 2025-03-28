@@ -39,99 +39,109 @@ const projects = [
     },
 ];
 
+const processSteps = [
+    {
+        number: '01',
+        title: 'Discovery & Analysis',
+        description: 'We analyze your audience, goals, and current performance to inform our strategy.'
+    },
+    {
+        number: '02',
+        title: 'Strategy Development',
+        description: 'We create a comprehensive campaign strategy tailored to your unique business needs.'
+    },
+    {
+        number: '03',
+        title: 'Copywriting & Design',
+        description: 'Our team crafts compelling copy and designs that resonate with your audience.'
+    },
+    {
+        number: '04',
+        title: 'Testing & Optimization',
+        description: 'We rigorously test subject lines, copy, and design elements to optimize performance.'
+    },
+    {
+        number: '05',
+        title: 'Implementation',
+        description: 'We set up your campaign in your email platform, ensuring perfect delivery and timing.'
+    },
+    {
+        number: '06',
+        title: 'Reporting & Refinement',
+        description: 'We provide detailed performance reports and continuously refine to improve results.'
+    }
+];
+
 export default function Work() {
     return (
-        <section id="work" className="py-20 bg-white">
+        <section id="work" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center">
-                    <h2 className="text-base font-semibold text-blue-600 tracking-wide uppercase">Our Work</h2>
-                    <p className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">Email Campaigns That Convert</p>
-                    <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="section-heading">Our Work</h2>
+                    <p className="section-title">Email Campaigns That Convert</p>
+                    <p className="section-subtitle">
                         Browse through some of our most successful email campaigns and the results they&apos;ve achieved for our clients.
                     </p>
                 </div>
 
-                <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => (
-                        <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-                            <div className="h-48 bg-gray-200 relative">
-                                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-500/80 to-purple-600/80 text-white">
-                                    <div className="text-center px-4">
-                                        <div className="text-sm font-medium">{project.category}</div>
-                                        <div className="text-xl font-bold mt-1">{project.title}</div>
-                                    </div>
+                        <div
+                            key={index}
+                            className="group bg-secondary/10 hover:bg-secondary/20 transition-all duration-300"
+                        >
+                            <div className="p-8">
+                                <div className="mb-4 text-xs font-mono tracking-wider text-primary/80 uppercase">
+                                    {project.category}
                                 </div>
-                            </div>
-                            <div className="p-6">
-                                <p className="text-gray-600">{project.description}</p>
-                                <div className="mt-4 flex justify-between items-center">
-                                    <span className="text-sm font-medium text-blue-600">View Campaign</span>
-                                    <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Success</span>
+                                <h3 className="text-xl font-mono font-semibold text-dark mb-4 group-hover:text-primary transition-colors duration-300">
+                                    {project.title}
+                                </h3>
+                                <p className="font-body text-dark/70">
+                                    {project.description}
+                                </p>
+                                <div className="mt-6 flex items-center text-primary">
+                                    <span className="text-sm font-mono">View Campaign</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 ml-2">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-12 text-center">
-                    <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+                <div className="mt-16 text-center">
+                    <button className="px-8 py-3 bg-transparent border border-primary text-primary font-mono text-sm hover:bg-primary hover:text-white transition-colors duration-300">
                         View All Case Studies
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
                     </button>
                 </div>
 
-                <div className="mt-20 bg-blue-50 rounded-lg p-8 shadow-md">
-                    <div className="text-center">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Process</h3>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+                <div className="mt-32 bg-secondary/10 py-16 px-8">
+                    <div className="text-center max-w-3xl mx-auto mb-20">
+                        <h3 className="text-2xl font-mono font-semibold text-dark">Our Process</h3>
+                        <p className="mt-6 font-body text-dark/70">
                             Every successful email campaign follows our proven 6-step process designed to maximize engagement and conversions.
                         </p>
                     </div>
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        <div className="text-center">
-                            <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
-                                <span className="text-xl font-bold">1</span>
+                    <div className="grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+                        {processSteps.map((step, index) => (
+                            <div key={index} className="group">
+                                <div className="flex items-start">
+                                    <div className="mr-6 text-2xl font-mono font-bold text-primary/30 group-hover:text-primary transition-colors duration-300">
+                                        {step.number}
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-mono font-semibold text-dark mb-3 group-hover:text-primary transition-colors duration-300">
+                                            {step.title}
+                                        </h4>
+                                        <p className="font-body text-dark/70">
+                                            {step.description}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">Discovery & Analysis</h4>
-                            <p className="text-gray-600">We analyze your audience, goals, and current performance to inform our strategy.</p>
-                        </div>
-                        <div className="text-center">
-                            <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
-                                <span className="text-xl font-bold">2</span>
-                            </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">Strategy Development</h4>
-                            <p className="text-gray-600">We create a comprehensive campaign strategy tailored to your unique business needs.</p>
-                        </div>
-                        <div className="text-center">
-                            <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
-                                <span className="text-xl font-bold">3</span>
-                            </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">Copywriting & Design</h4>
-                            <p className="text-gray-600">Our team crafts compelling copy and designs that resonate with your audience.</p>
-                        </div>
-                        <div className="text-center">
-                            <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
-                                <span className="text-xl font-bold">4</span>
-                            </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">Testing & Optimization</h4>
-                            <p className="text-gray-600">We rigorously test subject lines, copy, and design elements to optimize performance.</p>
-                        </div>
-                        <div className="text-center">
-                            <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
-                                <span className="text-xl font-bold">5</span>
-                            </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">Implementation</h4>
-                            <p className="text-gray-600">We set up your campaign in your email platform, ensuring perfect delivery and timing.</p>
-                        </div>
-                        <div className="text-center">
-                            <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
-                                <span className="text-xl font-bold">6</span>
-                            </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">Reporting & Refinement</h4>
-                            <p className="text-gray-600">We provide detailed performance reports and continuously refine to improve results.</p>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

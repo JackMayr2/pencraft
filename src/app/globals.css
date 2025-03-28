@@ -5,13 +5,128 @@
 @import '../styles/custom.css';
 
 :root {
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-merriweather);
+  --font-mono: var(--font-space-mono);
+  --font-sans: var(--font-poppins);
+  --color-primary: #2e3e44;
+  --color-secondary: #cad5d8;
+  --color-dark: #2e3e44;
+  --color-light: #ffffff;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
   body {
-    @apply bg-white text-gray-900;
+    background-color: white;
+    color: var(--color-dark);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-mono);
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    color: var(--color-dark);
+  }
+
+  p {
+    font-family: var(--font-sans);
+    line-height: 1.7;
+  }
+
+  a {
+    transition: color 0.3s ease;
+  }
+
+  input,
+  textarea,
+  select {
     font-family: var(--font-sans);
   }
+}
+
+@layer components {
+  .btn {
+    @apply px-8 py-3 transition-all duration-300 font-mono text-sm uppercase tracking-wider;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-primary/30 text-primary hover:border-primary hover:bg-secondary/20;
+  }
+
+  .section-heading {
+    @apply text-xs uppercase tracking-widest text-primary/80 font-mono;
+  }
+
+  .section-title {
+    @apply mt-3 text-3xl font-semibold text-dark font-mono sm:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply mt-6 max-w-2xl text-base text-dark/70 mx-auto font-body;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Background Colors */
+.bg-light {
+  background-color: var(--color-light);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+/* Text Colors */
+.text-light {
+  color: var(--color-light);
+}
+
+.text-dark {
+  color: var(--color-dark);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+/* Font Classes */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
+
+.font-heading {
+  font-family: var(--font-mono);
 }
