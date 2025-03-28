@@ -4,7 +4,7 @@ const teamMembers = [
     {
         name: 'Jack Mayr',
         position: 'Co-Founder & Email Strategist',
-        bio: 'With over 10 years of experience in digital marketing, Jack specializes in crafting email strategies that convert. He has helped businesses across various industries increase their email ROI by an average of 200%.',
+        bio: 'With over 10 years of experience in digital marketing, Jack specializes in crafting email strategies that convert. He has helped businesses across various industries increase their email ROI by an average of 250%.',
         social: {
             linkedin: '#',
             twitter: '#',
