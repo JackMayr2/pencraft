@@ -16,7 +16,7 @@ export default function Footer() {
                             </Link>
                         </div>
                         <p className="text-gray-300 mb-4 max-w-md">
-                            Pigeon Pipeline streamlines your email marketing with high-converting, strategic campaigns that flow smoothly from your business to your audience's inbox.
+                            Pigeon Pipeline streamlines your email marketing with high-converting, strategic campaigns that flow smoothly from your business to your audience&apos;s inbox.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-white transition duration-300">
