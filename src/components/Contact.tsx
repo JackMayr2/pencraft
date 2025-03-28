@@ -127,7 +127,7 @@ export default function Contact() {
                                             </svg>
                                         </div>
                                         <div className="ml-3 text-base text-gray-700">
-                                            <p>hello@pencraft.io</p>
+                                            <p>hello@pigeonpipeline.io</p>
                                             <p className="mt-1">We&apos;ll respond within 24 hours</p>
                                         </div>
                                     </div>

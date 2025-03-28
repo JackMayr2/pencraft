@@ -12,11 +12,11 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-2">
                         <div className="mb-4">
                             <Link href="/" className="flex items-center">
-                                <Image src="/images/logo.svg" alt="PenCraft Email Architects" width={180} height={54} />
+                                <Image src="/images/logo.svg" alt="Pigeon Pipeline" width={240} height={54} />
                             </Link>
                         </div>
                         <p className="text-gray-300 mb-4 max-w-md">
-                            PenCraft Email Architects specializes in crafting high-converting email campaigns that engage your audience and drive results.
+                            Pigeon Pipeline streamlines your email marketing with high-converting, strategic campaigns that flow smoothly from your business to your audience's inbox.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-white transition duration-300">
@@ -106,7 +106,7 @@ export default function Footer() {
                 <div className="mt-12 pt-8 border-t border-gray-800">
                     <div className="flex flex-col md:flex-row justify-between">
                         <p className="text-base text-gray-400">
-                            © {currentYear} PenCraft Email Architects. All rights reserved.
+                            © {currentYear} Pigeon Pipeline. All rights reserved.
                         </p>
                         <div className="mt-4 md:mt-0 flex space-x-6">
                             <Link href="#" className="text-gray-400 hover:text-white transition duration-300">

@@ -9,7 +9,7 @@ export default function Header() {
                 <div className="flex justify-between items-center h-20">
                     <div className="flex items-center">
                         <Link href="/" className="flex-shrink-0">
-                            <Image src="/images/logo.svg" alt="PenCraft Email Architects" width={200} height={60} priority />
+                            <Image src="/images/logo.svg" alt="Pigeon Pipeline" width={260} height={60} priority />
                         </Link>
                     </div>
                     <nav className="hidden md:flex space-x-10">

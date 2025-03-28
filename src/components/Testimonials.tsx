@@ -2,7 +2,7 @@ import React from 'react';
 
 const testimonials = [
     {
-        content: "PenCraft completely transformed our email marketing. Their copywriting expertise and strategic approach increased our open rates by 45% and conversion rates by 30% within just 3 months.",
+        content: "Pigeon Pipeline completely transformed our email marketing. Their copywriting expertise and strategic approach increased our open rates by 45% and conversion rates by 30% within just 3 months.",
         author: "Sarah Johnson",
         position: "Marketing Director, TechCorp",
         image: "/images/testimonial-1.png"
@@ -14,13 +14,13 @@ const testimonials = [
         image: "/images/testimonial-2.png"
     },
     {
-        content: "What impressed me most was PenCraft's data-driven approach. They continuously tested and optimized our campaigns, resulting in a 250% ROI on our email marketing investment. I couldn't recommend them more highly.",
+        content: "What impressed me most was Pigeon Pipeline's data-driven approach. They continuously tested and optimized our campaigns, resulting in a 250% ROI on our email marketing investment. I couldn&apos;t recommend them more highly.",
         author: "Emily Rodriguez",
         position: "CEO, Boutique Agency",
         image: "/images/testimonial-3.png"
     },
     {
-        content: "Working with PenCraft was a game-changer for our SaaS business. Their welcome sequence increased trial-to-paid conversions by 35%, and their ongoing campaigns have significantly reduced churn.",
+        content: "Working with Pigeon Pipeline was a game-changer for our SaaS business. Their welcome sequence increased trial-to-paid conversions by 35%, and their ongoing campaigns have significantly reduced churn.",
         author: "David Patel",
         position: "Growth Lead, SaaS Platform",
         image: "/images/testimonial-4.png"

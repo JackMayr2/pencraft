@@ -3,21 +3,21 @@ import Link from 'next/link';
 
 export default function Hero() {
     return (
-        <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
                         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight md:text-6xl leading-tight">
-                            Emails that <span className="text-yellow-300">convert</span>,<br />
-                            copy that <span className="text-yellow-300">connects</span>.
+                            Streamlined <span className="text-yellow-300">emails</span><br />
+                            that <span className="text-yellow-300">deliver</span> results.
                         </h1>
                         <p className="mt-6 text-xl max-w-3xl">
-                            At PenCraft Email Architects, we craft high-converting email campaigns that engage your audience and drive results. Let us architect your email success story.
+                            At Pigeon Pipeline, we create frictionless email marketing flows that connect your business directly to your audience, delivering your message with precision and impact.
                         </p>
                         <div className="mt-10 flex flex-col sm:flex-row gap-4">
                             <Link
                                 href="#contact"
-                                className="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium bg-white text-blue-600 hover:bg-blue-50 transition duration-300"
+                                className="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium bg-white text-blue-700 hover:bg-blue-50 transition duration-300"
                             >
                                 Get Started
                             </Link>
@@ -58,7 +58,7 @@ export default function Hero() {
             <div className="bg-white/5 border-t border-white/10 py-4">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <p className="text-center text-sm md:text-base">
-                        Trusted by forward-thinking companies to deliver exceptional email campaigns
+                        Trusted by forward-thinking companies to streamline their email marketing pipeline
                     </p>
                     <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
                         <div className="col-span-1 flex justify-center opacity-70">

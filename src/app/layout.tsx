@@ -17,9 +17,9 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "PenCraft Email Architects | Expert Email Copywriting Services",
-  description: "PenCraft Email Architects helps businesses create high-converting email campaigns that engage your audience and drive results. Led by Jack Mayr and JP Jeanes.",
-  keywords: "email copywriting, email marketing, email campaigns, conversion optimization, Jack Mayr, JP Jeanes, PenCraft, email strategy",
+  title: "Pigeon Pipeline | Expert Email Copywriting Services",
+  description: "Pigeon Pipeline streamlines your email marketing with high-converting, strategic campaigns that flow smoothly from your business to your audience's inbox.",
+  keywords: "email copywriting, email marketing, email campaigns, conversion optimization, Jack Mayr, JP Jeanes, Pigeon Pipeline, email strategy",
 };
 
 export default function RootLayout({
