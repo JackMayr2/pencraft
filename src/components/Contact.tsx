@@ -104,8 +104,8 @@ export default function Contact() {
                                         </svg>
                                     </div>
                                     <div className="ml-4 font-body">
-                                        <p className="text-dark">(555) 123-4567</p>
-                                        <p className="text-dark/60 text-sm mt-1">Mon-Fri 9am-6pm EST</p>
+                                        <p className="text-dark">(609) 349-2503</p>
+                                        <p className="text-dark/60 text-sm mt-1">Mon-Fri 9am-6pm PST</p>
                                     </div>
                                 </div>
 
@@ -116,7 +116,7 @@ export default function Contact() {
                                         </svg>
                                     </div>
                                     <div className="ml-4 font-body">
-                                        <p className="text-dark">hello@pigeonpipeline.io</p>
+                                        <p className="text-dark">inquiries@pigeonpipeline.com</p>
                                         <p className="text-dark/60 text-sm mt-1">We&apos;ll respond within 24 hours</p>
                                     </div>
                                 </div>
@@ -129,9 +129,9 @@ export default function Contact() {
                                         </svg>
                                     </div>
                                     <div className="ml-4 font-body">
-                                        <p className="text-dark">123 Marketing Ave</p>
-                                        <p className="text-dark">Suite 456</p>
-                                        <p className="text-dark">New York, NY 10001</p>
+                                        <p className="text-dark">8721 Sunset Boulevard</p>
+                                        <p className="text-dark">Suite 305</p>
+                                        <p className="text-dark">Los Angeles, CA 90069</p>
                                     </div>
                                 </div>
                             </div>

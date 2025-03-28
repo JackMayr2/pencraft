@@ -8,11 +8,12 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: '#2e3e44', // Dark teal
+                primary: '#1e40af', // Royal blue
                 secondary: '#cad5d8', // Light gray-blue
+                dark: '#2e3e44', // Dark teal (moved from primary)
                 // Legacy colors as fallbacks
                 blue: {
-                    600: '#2e3e44', // Map to primary for compatibility
+                    600: '#1e40af', // Map to primary for compatibility
                 },
                 gray: {
                     50: '#f8f9fa',

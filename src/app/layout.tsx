@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   title: "Pigeon Pipeline | Expert Email Copywriting Services",
   description: "Pigeon Pipeline streamlines your email marketing with high-converting, strategic campaigns that flow smoothly from your business to your audience's inbox.",
   keywords: "email copywriting, email marketing, email campaigns, conversion optimization, Jack Mayr, JP Jeanes, Pigeon Pipeline, email strategy",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/pigeon_logo.svg', type: 'image/svg+xml' }
+    ],
+    apple: '/pigeon_logo.svg',
+  },
 };
 
 export default function RootLayout({
