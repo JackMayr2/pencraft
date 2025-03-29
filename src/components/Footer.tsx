@@ -12,7 +12,7 @@ export default function Footer() {
                     <div className="md:col-span-5">
                         <div className="mb-8">
                             <Link href="/" className="flex items-center">
-                                <Image src="/pigeon_logo.svg" alt="Pigeon Pipeline" width={180} height={40} />
+                                <Image src="/pigeon_white.svg" alt="Pigeon Pipeline" width={180} height={40} />
                                 <span className="ml-3 text-lg font-mono font-bold text-white tracking-tight">Pigeon Pipeline</span>
                             </Link>
                         </div>

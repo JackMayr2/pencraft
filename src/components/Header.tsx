@@ -9,7 +9,7 @@ export default function Header() {
                 <div className="flex justify-between items-center h-24">
                     <div className="flex items-center">
                         <Link href="/" className="flex-shrink-0 flex items-center">
-                            <Image src="/pigeon_logo.svg" alt="Pigeon Pipeline" width={220} height={50} priority className="h-12 w-auto" />
+                            <Image src="/pigeon_white.svg" alt="Pigeon Pipeline" width={220} height={50} priority className="h-12 w-auto" />
                             <span className="ml-3 text-xl font-mono font-bold text-white tracking-tight">Pigeon Pipeline</span>
                         </Link>
                     </div>

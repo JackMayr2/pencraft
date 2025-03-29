@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
     return (
@@ -35,6 +36,15 @@ export default function Hero() {
                                     <div className="w-2.5 h-2.5 rounded-full bg-dark opacity-70"></div>
                                     <div className="w-2.5 h-2.5 rounded-full bg-primary opacity-40"></div>
                                 </div>
+                            </div>
+                            <div className="flex justify-center mb-4">
+                                <Image
+                                    src="/pigeon_blue.svg"
+                                    alt="Pigeon Pipeline"
+                                    width={120}
+                                    height={40}
+                                    className="h-10 w-auto"
+                                />
                             </div>
                             <div className="space-y-4">
                                 <div className="w-full h-4 bg-white rounded-none"></div>
