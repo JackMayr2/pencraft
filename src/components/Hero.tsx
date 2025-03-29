@@ -13,8 +13,8 @@ export default function Hero() {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
                     <div className="md:col-span-7">
                         <h1 className="text-4xl sm:text-5xl font-mono font-bold tracking-tight md:text-6xl leading-tight">
-                            <span className="text-primary">Emails</span> that convert,<br />
-                            <span className="text-primary">copy</span> that connects.
+                            Emails that <span className="text-primary">convert</span>,<br />
+                            copy that <span className="text-primary">connects</span>.
                         </h1>
                         <p className="mt-6 text-xl font-body font-light text-dark/80 max-w-2xl">
                             At Pigeon Pipeline, we create frictionless email marketing flows that connect your business directly to your audience, delivering your message with precision and impact.
