@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 // Type definition for service items
 interface ServiceItem {
@@ -99,50 +100,7 @@ const getIconTextClass = (accentColor: string): string => {
     return 'text-accent';
 };
 
-// Type definition for process step items
-interface ProcessStep {
-    step: string;
-    title: string;
-    description: string;
-    color: 'iridescent' | 'secondary' | 'accent';
-}
-
 export default function Services() {
-    // Process step data
-    const processSteps: ProcessStep[] = [
-        {
-            step: '01',
-            title: 'Discover',
-            description: 'We dig deep to understand your brand vibe, audience groove, and business goals',
-            color: 'iridescent'
-        },
-        {
-            step: '02',
-            title: 'Design',
-            description: 'We craft your email strategy and messaging framework with funky fresh ideas',
-            color: 'accent'
-        },
-        {
-            step: '03',
-            title: 'Create',
-            description: 'We write copy that flows with rhythmic words and captivating hooks',
-            color: 'secondary'
-        },
-        {
-            step: '04',
-            title: 'Amplify',
-            description: 'We optimize and refine based on results to keep your emails grooving',
-            color: 'iridescent'
-        }
-    ];
-
-    // Helper function for process step colors
-    const getProcessStepClasses = (color: string): string => {
-        if (color === 'iridescent') return 'bg-iridescent text-light';
-        if (color === 'secondary') return 'bg-secondary text-light';
-        return 'bg-accent text-light';
-    };
-
     return (
         <section id="services" className="py-24 bg-white">
             <div className="container-padded">
@@ -177,41 +135,19 @@ export default function Services() {
                     ))}
                 </div>
 
-                {/* Process Section */}
-                <div className="mt-24 pt-16 border-t border-slate/10">
-                    <div className="text-center mb-16">
-                        <h2 className="text-sm uppercase tracking-wider text-iridescent font-medium mb-2">Our Process</h2>
-                        <h3 className="text-3xl font-medium text-dark mb-4">How We Work</h3>
-                        <p className="text-slate max-w-2xl mx-auto">
-                            Our streamlined process takes your email marketing from concept to conversion
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {processSteps.map((step, index) => (
-                            <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                                <div className={`w-10 h-10 rounded-md ${getProcessStepClasses(step.color)} flex items-center justify-center mb-4 text-sm font-medium`}>
-                                    {step.step}
-                                </div>
-                                <h3 className="text-lg font-medium mb-2 text-dark">{step.title}</h3>
-                                <p className="text-slate text-sm">{step.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
                 {/* CTA */}
                 <div className="mt-24 py-12 px-6 bg-light rounded-lg text-center">
-                    <h3 className="text-2xl font-medium mb-4 text-dark">Ready to transform your email marketing?</h3>
-                    <p className="text-slate mb-8 max-w-2xl mx-auto">
-                        Let&apos;s create email campaigns that resonate with your audience and drive results that will make your business succeed.
-                    </p>
-                    <a href="#contact" className="btn bg-iridescent text-light hover:bg-iridescent-dark inline-flex items-center">
-                        Get Started
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                    </a>
+                    <div className="text-center max-w-2xl mx-auto">
+                        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Email Marketing?</h2>
+                        <p className="text-dark mb-8">
+                            Let&apos;s create email campaigns that drive results and build lasting customer relationships.
+                        </p>
+                        <Link href="#contact">
+                            <button className="btn bg-iridescent text-light hover:bg-iridescent-light">
+                                Start Your Project
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>

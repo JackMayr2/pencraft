@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Service {
     name: string;
@@ -41,7 +42,7 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-2 lg:col-span-1">
                         <div className="flex items-center mb-6">
                             <div className="w-12 h-12 bg-iridescent flex items-center justify-center rounded-md mr-3">
-                                <img src="/fly_logo.svg" alt="ZappaFly Logo" className="w-10 h-10" />
+                                <Image src="/fly_logo.svg" alt="ZappaFly Logo" width={40} height={40} />
                             </div>
                             <span className="text-xl font-medium">
                                 Zappa<span className="text-iridescent">Fly</span>

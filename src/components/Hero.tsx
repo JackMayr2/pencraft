@@ -30,12 +30,11 @@ export default function Hero() {
                             transition={{ duration: 0.5 }}
                             className="mb-8"
                         >
-                            <h1 className="text-4xl sm:text-5xl font-medium tracking-tight md:text-6xl leading-tight mb-6">
-                                Zap pesky emails. <br />
-                                Keep marketing that <span className="text-iridescent">flies</span>.
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                                Transform Your Email Marketing with Strategic Copywriting
                             </h1>
-                            <p className="text-xl text-light/90 max-w-2xl">
-                                At ZappaFly, we transform boring marketing emails into high-converting messages that your customers actually want to receive and engage with.
+                            <p className="text-lg md:text-xl text-light/80 mb-8 max-w-2xl">
+                                We craft compelling email campaigns that drive engagement and deliver measurable results. Our data-driven approach combines creativity with proven strategies to help your business grow.
                             </p>
                         </motion.div>
 
@@ -45,17 +44,15 @@ export default function Hero() {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="flex flex-col sm:flex-row gap-4 mt-8"
                         >
-                            <Link href="#contact" className="btn btn-primary inline-flex items-center group">
-                                Get Zapping
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
+                            <Link href="#contact">
+                                <button className="btn bg-iridescent text-light hover:bg-iridescent-light">
+                                    Start Your Project
+                                </button>
                             </Link>
-                            <Link href="#work" className="btn btn-secondary inline-flex items-center group backdrop-blur-sm bg-light/10 text-light border-light/30 hover:bg-light/20 hover:border-light/50">
-                                See Our Work
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                                </svg>
+                            <Link href="#services">
+                                <button className="btn bg-light/10 text-light hover:bg-light/20">
+                                    Explore Services
+                                </button>
                             </Link>
                         </motion.div>
                     </div>

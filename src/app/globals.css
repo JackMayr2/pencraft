@@ -25,6 +25,7 @@
 
 :root {
   --font-avant-garde: var(--font-avant-garde), 'Poppins', system-ui, sans-serif;
+  --font-visby: 'Visby CF', sans-serif;
 
   /* Color Palette */
   --color-primary: #00d722;
@@ -33,27 +34,27 @@
   /* Lighter iridescent green */
   --color-primary-dark: #008815;
   /* Darker iridescent green */
-  --color-secondary: #4f645c;
+  --color-secondary: #6c63ff;
   /* Forest green */
-  --color-secondary-light: #6a7d76;
+  --color-secondary-light: #8a84ff;
   /* Lighter forest green */
-  --color-secondary-dark: #3a4c45;
+  --color-secondary-dark: #4a42ff;
   /* Darker forest green */
-  --color-accent: #883e49;
+  --color-accent: #b14eff;
   /* Burgundy */
-  --color-accent-light: #ad5e6a;
+  --color-accent-light: #c67eff;
   /* Lighter burgundy */
-  --color-accent-dark: #6a2f38;
+  --color-accent-dark: #8c1eff;
   /* Darker burgundy */
-  --color-dark: #000000;
+  --color-dark: #0a0a0a;
   /* Black */
-  --color-slate: #37404d;
+  --color-slate: #1a1a1a;
   /* Slate blue-gray */
   --color-slate-light: #5c6575;
   /* Lighter slate */
-  --color-cream: #f8f5f0;
+  --color-cream: #f5f5f5;
   /* Cream color for backgrounds */
-  --color-sand: #e8e0d0;
+  --color-sand: #e5e5e5;
   /* Sandy color for accents */
   --color-light: #ffffff;
   /* White */
@@ -183,7 +184,7 @@
   }
 
   .btn-accent {
-    @apply bg-accent text-light hover:bg-accent-dark;
+    @apply bg-accent text-light hover:bg-accent-light transition-colors duration-200;
   }
 
   .btn-accent::after {
@@ -325,6 +326,26 @@
   .animate-slide-up {
     @apply opacity-0 translate-y-6;
     animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+
+  .border-accent {
+    border-color: var(--color-accent);
+  }
+
+  .ring-accent {
+    --tw-ring-color: var(--color-accent);
+  }
+
+  .shadow-accent {
+    box-shadow: 0 0 15px rgba(177, 78, 255, 0.3);
   }
 }
 

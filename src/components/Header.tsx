@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Header() {
@@ -36,10 +37,10 @@ export default function Header() {
                     <Link href="/" className="relative z-10">
                         <div className="flex items-center">
                             <div className={`w-12 h-12 flex items-center justify-center rounded-md mr-3 transition-all duration-300 ${isScrolled ? 'bg-iridescent' : 'bg-iridescent'}`}>
-                                <img src="/fly_logo.svg" alt="ZappaFly Logo" className="w-10 h-10" />
+                                <Image src="/fly_logo.svg" alt="ZappaFly Logo" width={40} height={40} />
                             </div>
                             <span className="text-xl font-medium tracking-tight">
-                                <span className={isScrolled ? 'text-dark' : 'text-light'}>Zappa<span className={isScrolled ? 'text-iridescent' : 'text-iridescent-light'}>Fly</span></span>
+                                <span className={isScrolled ? 'text-light' : 'text-light'}>ZappaFly</span>
                             </span>
                         </div>
                     </Link>

@@ -25,7 +25,7 @@ const teamMembers: TeamMember[] = [
     {
         name: 'JP Jeanes',
         position: 'Co-Founder & Creative Director',
-        bio: 'JP brings a unique blend of creativity and data-driven decision making to email copywriting. His background in psychology and conversion optimization has helped numerous brands create meaningful connections with their audience.',
+        bio: "JP Jeanes is a strategic copywriter with a knack for turning complex ideas into compelling narratives. With a background in technical writing and creative direction, JP crafts copy that not only engages but drives measurable results. When not writing, you'll find JP exploring the latest in AI technology and experimenting with new writing techniques.",
         social: {
             linkedin: '#',
             twitter: '#',
