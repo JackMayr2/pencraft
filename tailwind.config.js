@@ -8,12 +8,19 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: '#1155cc', // Updated royal blue
+                primary: '#1155cc', // Royal blue
                 secondary: '#cad5d8', // Light gray-blue
-                dark: '#2e3e44', // Dark teal (moved from primary)
+                accent: '#4d7cc3', // Lighter blue for accents
+                darkblue: '#0e3c8c', // Darker blue for depth
+                lightblue: '#e6eefb', // Very light blue for backgrounds
+                dark: '#2e3e44', // Dark teal
+                slate: '#6b7b8a', // Medium slate gray
                 // Legacy colors as fallbacks
                 blue: {
                     600: '#1155cc', // Map to primary for compatibility
+                    700: '#0e3c8c', // Darker blue
+                    400: '#4d7cc3', // Lighter blue
+                    200: '#e6eefb', // Very light blue
                 },
                 gray: {
                     50: '#f8f9fa',
@@ -29,9 +36,8 @@ module.exports = {
                 },
             },
             fontFamily: {
-                mono: ['var(--font-space-mono)', 'Space Mono', 'monospace'],
                 sans: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
-                heading: ['var(--font-space-mono)', 'Space Mono', 'monospace'],
+                heading: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
                 body: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
             },
             backgroundColor: {
@@ -44,9 +50,14 @@ module.exports = {
             },
             letterSpacing: {
                 'widest': '0.2em',
+                'tight': '-0.01em',
             },
             spacing: {
                 '128': '32rem',
+            },
+            boxShadow: {
+                'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                'btn': '0 1px 2px rgba(0, 0, 0, 0.05)',
             },
         },
     },

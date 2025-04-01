@@ -91,8 +91,10 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-24 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="contact" className="py-24 bg-white relative">
+            <div className="absolute left-0 top-0 w-full h-32 bg-dots opacity-40"></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div className="text-center max-w-3xl mx-auto">
                     <h2 className="section-heading">Contact Us</h2>
                     <p className="section-title">Let&apos;s Discuss Your Email Strategy</p>
@@ -101,7 +103,7 @@ export default function Contact() {
                     </p>
                 </div>
 
-                <div className="mt-20 grid grid-cols-1 lg:grid-cols-5 gap-16">
+                <div className="mt-16 grid grid-cols-1 lg:grid-cols-5 gap-16">
                     <div className="lg:col-span-3">
                         {formStatus.isSubmitted ? (
                             <div className="bg-green-50 border-l-4 border-green-500 p-8">
@@ -112,7 +114,7 @@ export default function Contact() {
                                         </svg>
                                     </div>
                                     <div className="ml-3">
-                                        <h3 className="text-lg font-mono font-medium text-green-800">
+                                        <h3 className="text-lg font-medium text-green-800">
                                             Message Sent!
                                         </h3>
                                         <p className="mt-2 text-green-700">
@@ -120,7 +122,7 @@ export default function Contact() {
                                         </p>
                                         <button
                                             onClick={() => setFormStatus(prev => ({ ...prev, isSubmitted: false }))}
-                                            className="mt-4 px-5 py-2 border border-green-500 text-green-500 font-mono text-sm hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                            className="mt-4 px-5 py-2 border border-green-500 text-green-500 text-sm hover:bg-green-500 hover:text-white transition-colors duration-300"
                                         >
                                             Send Another Message
                                         </button>
@@ -128,7 +130,7 @@ export default function Contact() {
                                 </div>
                             </div>
                         ) : (
-                            <form className="space-y-8" onSubmit={handleSubmit}>
+                            <form className="space-y-8 card" onSubmit={handleSubmit}>
                                 {formStatus.isError && (
                                     <div className="bg-red-50 border-l-4 border-red-500 p-4">
                                         <div className="flex">
@@ -148,13 +150,13 @@ export default function Contact() {
 
                                 <div className="space-y-6">
                                     <div>
-                                        <label htmlFor="name" className="block text-sm font-mono text-dark mb-2">Full name<span className="text-red-500">*</span></label>
+                                        <label htmlFor="name" className="block text-sm font-medium text-dark mb-2">Full name<span className="text-red-500">*</span></label>
                                         <input
                                             type="text"
                                             name="name"
                                             id="name"
                                             autoComplete="name"
-                                            className="py-3 px-4 block w-full border-b border-primary/20 bg-transparent focus:border-primary focus:ring-0 transition-colors font-body"
+                                            className="py-3 px-4 block w-full border-b border-primary/20 bg-transparent focus:border-primary focus:ring-0 transition-colors"
                                             placeholder="John Smith"
                                             value={formData.name}
                                             onChange={handleChange}
@@ -163,13 +165,13 @@ export default function Contact() {
                                     </div>
 
                                     <div>
-                                        <label htmlFor="email" className="block text-sm font-mono text-dark mb-2">Email address<span className="text-red-500">*</span></label>
+                                        <label htmlFor="email" className="block text-sm font-medium text-dark mb-2">Email address<span className="text-red-500">*</span></label>
                                         <input
                                             id="email"
                                             name="email"
                                             type="email"
                                             autoComplete="email"
-                                            className="py-3 px-4 block w-full border-b border-primary/20 bg-transparent focus:border-primary focus:ring-0 transition-colors font-body"
+                                            className="py-3 px-4 block w-full border-b border-primary/20 bg-transparent focus:border-primary focus:ring-0 transition-colors"
                                             placeholder="john@example.com"
                                             value={formData.email}
                                             onChange={handleChange}
@@ -178,13 +180,13 @@ export default function Contact() {
                                     </div>
 
                                     <div>
-                                        <label htmlFor="company" className="block text-sm font-mono text-dark mb-2">Company</label>
+                                        <label htmlFor="company" className="block text-sm font-medium text-dark mb-2">Company</label>
                                         <input
                                             type="text"
                                             name="company"
                                             id="company"
                                             autoComplete="organization"
-                                            className="py-3 px-4 block w-full border-b border-primary/20 bg-transparent focus:border-primary focus:ring-0 transition-colors font-body"
+                                            className="py-3 px-4 block w-full border-b border-primary/20 bg-transparent focus:border-primary focus:ring-0 transition-colors"
                                             placeholder="Your Company, Inc."
                                             value={formData.company}
                                             onChange={handleChange}
@@ -192,11 +194,11 @@ export default function Contact() {
                                     </div>
 
                                     <div>
-                                        <label htmlFor="service" className="block text-sm font-mono text-dark mb-2">Service Interested In</label>
+                                        <label htmlFor="service" className="block text-sm font-medium text-dark mb-2">Service Interested In</label>
                                         <select
                                             id="service"
                                             name="service"
-                                            className="py-3 px-4 block w-full border-b border-primary/20 bg-transparent focus:border-primary focus:ring-0 transition-colors font-body"
+                                            className="py-3 px-4 block w-full border-b border-primary/20 bg-transparent focus:border-primary focus:ring-0 transition-colors"
                                             value={formData.service}
                                             onChange={handleChange}
                                         >
@@ -212,12 +214,12 @@ export default function Contact() {
                                     </div>
 
                                     <div>
-                                        <label htmlFor="message" className="block text-sm font-mono text-dark mb-2">Message<span className="text-red-500">*</span></label>
+                                        <label htmlFor="message" className="block text-sm font-medium text-dark mb-2">Message<span className="text-red-500">*</span></label>
                                         <textarea
                                             id="message"
                                             name="message"
                                             rows={5}
-                                            className="py-3 px-4 block w-full border-b border-primary/20 bg-transparent focus:border-primary focus:ring-0 transition-colors font-body"
+                                            className="py-3 px-4 block w-full border-b border-primary/20 bg-transparent focus:border-primary focus:ring-0 transition-colors"
                                             placeholder="Tell us about your email marketing goals..."
                                             value={formData.message}
                                             onChange={handleChange}
@@ -230,7 +232,7 @@ export default function Contact() {
                                     <button
                                         type="submit"
                                         disabled={formStatus.isSubmitting}
-                                        className={`px-8 py-3 border border-primary ${formStatus.isSubmitting ? 'bg-primary/50 text-white cursor-not-allowed' : 'bg-transparent text-primary hover:bg-primary hover:text-white'} transition-colors duration-300 font-mono text-sm`}
+                                        className={`btn btn-primary shadow-btn ${formStatus.isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                                     >
                                         {formStatus.isSubmitting ? 'Sending...' : 'Send Message'}
                                     </button>
@@ -240,41 +242,41 @@ export default function Contact() {
                     </div>
 
                     <div className="lg:col-span-2 space-y-12">
-                        <div>
-                            <h3 className="text-xl font-mono font-semibold text-dark mb-6">Get in Touch</h3>
+                        <div className="card">
+                            <h3 className="text-xl font-medium text-dark mb-6">Get in Touch</h3>
                             <div className="space-y-8">
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center border border-primary/30 text-primary">
+                                    <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary/10 rounded-sm text-primary">
                                         <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                         </svg>
                                     </div>
-                                    <div className="ml-4 font-body">
+                                    <div className="ml-4">
                                         <p className="text-dark">(609) 349-2503</p>
                                         <p className="text-dark/60 text-sm mt-1">Mon-Fri 9am-6pm PST</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center border border-primary/30 text-primary">
+                                    <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary/10 rounded-sm text-primary">
                                         <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                         </svg>
                                     </div>
-                                    <div className="ml-4 font-body">
+                                    <div className="ml-4">
                                         <p className="text-dark">inquiries@pigeonpipeline.com</p>
                                         <p className="text-dark/60 text-sm mt-1">We&apos;ll respond within 24 hours</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center border border-primary/30 text-primary">
+                                    <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-primary/10 rounded-sm text-primary">
                                         <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
                                     </div>
-                                    <div className="ml-4 font-body">
+                                    <div className="ml-4">
                                         <p className="text-dark">8721 Sunset Boulevard</p>
                                         <p className="text-dark">Suite 305</p>
                                         <p className="text-dark">Los Angeles, CA 90069</p>
@@ -283,8 +285,8 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div>
-                            <h3 className="text-xl font-mono font-semibold text-dark mb-6">Follow Us</h3>
+                        <div className="card">
+                            <h3 className="text-xl font-medium text-dark mb-6">Follow Us</h3>
                             <div className="flex space-x-6">
                                 <a href="#" className="text-dark/60 hover:text-primary transition-colors duration-300">
                                     <span className="sr-only">LinkedIn</span>
@@ -307,12 +309,12 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="border-t border-primary/10 pt-12">
-                            <h3 className="text-xl font-mono font-semibold text-dark mb-4">Ready to get started?</h3>
-                            <p className="mb-6 font-body text-dark/70">
+                        <div className="card bg-primary/5 mt-8">
+                            <h3 className="text-xl font-medium text-dark mb-4">Ready to get started?</h3>
+                            <p className="mb-6 text-dark/70">
                                 Schedule a free 30-minute consultation to discuss your email marketing needs and learn how we can help.
                             </p>
-                            <button className="px-8 py-3 border border-primary text-primary font-mono text-sm hover:bg-primary hover:text-white transition-colors duration-300">
+                            <button className="btn btn-primary shadow-btn">
                                 Book a Consultation
                             </button>
                         </div>

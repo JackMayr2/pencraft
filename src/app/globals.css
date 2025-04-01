@@ -5,11 +5,14 @@
 @import '../styles/custom.css';
 
 :root {
-  --font-mono: var(--font-space-mono);
   --font-sans: var(--font-poppins);
-  --color-primary: #1e40af;
+  --color-primary: #1155cc;
   --color-secondary: #cad5d8;
+  --color-accent: #4d7cc3;
+  --color-darkblue: #0e3c8c;
+  --color-lightblue: #e6eefb;
   --color-dark: #2e3e44;
+  --color-slate: #6b7b8a;
   --color-light: #ffffff;
 }
 
@@ -32,8 +35,8 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-mono);
-    letter-spacing: -0.025em;
+    font-family: var(--font-sans);
+    letter-spacing: -0.015em;
     font-weight: 600;
     color: var(--color-dark);
   }
@@ -56,7 +59,7 @@
 
 @layer components {
   .btn {
-    @apply px-8 py-3 transition-all duration-300 font-mono text-sm uppercase tracking-wider;
+    @apply px-8 py-3 transition-all duration-300 text-sm tracking-wide font-medium shadow-btn;
   }
 
   .btn-primary {
@@ -67,20 +70,68 @@
     @apply bg-transparent border border-primary/30 text-primary hover:border-primary hover:bg-secondary/20;
   }
 
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent/90;
+  }
+
   .section-heading {
-    @apply text-xs uppercase tracking-widest text-primary/80 font-mono;
+    @apply text-xs uppercase tracking-wide text-primary/80 font-medium;
   }
 
   .section-title {
-    @apply mt-3 text-3xl font-semibold text-dark font-mono sm:text-4xl;
+    @apply mt-3 text-3xl font-semibold text-dark sm:text-4xl tracking-tight;
   }
 
   .section-subtitle {
-    @apply mt-6 max-w-2xl text-base text-dark/70 mx-auto font-body;
+    @apply mt-5 max-w-2xl text-base text-dark/70 mx-auto leading-relaxed;
   }
 
   .container-padding {
     @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .bg-pattern-grid {
+    background-image: linear-gradient(to right, var(--color-primary) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-primary) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-color: var(--color-lightblue);
+    background-position: 0 0;
+    opacity: 0.03;
+  }
+
+  .bg-gradient-blue {
+    background: linear-gradient(135deg, var(--color-lightblue) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(var(--color-primary) 1px, transparent 1px);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    opacity: 0.03;
+  }
+
+  .bg-wave {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-wave::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='wave' width='100' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 5 Q 25 0, 50 5, 75 0, 100 5' stroke='%23E6EEFB' fill='none' /%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23wave)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .card {
+    @apply bg-white p-6 rounded-sm shadow-card;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg;
   }
 }
 
@@ -101,6 +152,22 @@
   background-color: var(--color-primary);
 }
 
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-darkblue {
+  background-color: var(--color-darkblue);
+}
+
+.bg-lightblue {
+  background-color: var(--color-lightblue);
+}
+
+.bg-slate {
+  background-color: var(--color-slate);
+}
+
 /* Text Colors */
 .text-light {
   color: var(--color-light);
@@ -118,15 +185,39 @@
   color: var(--color-secondary);
 }
 
-/* Font Classes */
-.font-mono {
-  font-family: var(--font-mono);
+.text-accent {
+  color: var(--color-accent);
 }
 
-.font-body {
-  font-family: var(--font-sans);
+.text-darkblue {
+  color: var(--color-darkblue);
 }
 
-.font-heading {
-  font-family: var(--font-mono);
+.text-lightblue {
+  color: var(--color-lightblue);
+}
+
+.text-slate {
+  color: var(--color-slate);
+}
+
+/* Font Weights */
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
 }
