@@ -1,101 +1,217 @@
-import React from 'react';
+"use client";
 
-const services = [
+import React from 'react';
+import { motion } from 'framer-motion';
+
+// Type definition for service items
+interface ServiceItem {
+    id: number;
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+    accentColor: 'iridescent' | 'secondary' | 'accent';
+}
+
+const services: ServiceItem[] = [
     {
-        title: 'Email Campaign Strategy',
-        description: 'We develop comprehensive email marketing strategies tailored to your business goals, target audience, and industry-specific needs.',
+        id: 1,
+        title: 'Power Surge Sequences',
+        description: 'Automated email sequences that energize your audience from the first open to the final conversion.',
         icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
         ),
-        accentColor: true
+        accentColor: 'iridescent'
     },
     {
-        title: 'Copywriting & Content Creation',
-        description: 'Our expert copywriters craft compelling, conversion-focused email content that resonates with your audience and drives action.',
+        id: 2,
+        title: 'Electric Engagement',
+        description: 'Content that sparks genuine interest and meaningful conversations with your subscribers.',
         icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
         ),
+        accentColor: 'accent'
     },
     {
-        title: 'Email Design & Development',
-        description: 'We design visually stunning emails that complement your copy, ensuring a seamless, responsive experience across all devices.',
+        id: 3,
+        title: 'Lightning Launches',
+        description: 'High-impact email campaigns that get your products and offers to market with maximum velocity.',
         icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 1-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21a48.25 48.25 0 0 1-8.135-.687c-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
             </svg>
         ),
-        accentColor: true
+        accentColor: 'secondary'
     },
     {
-        title: 'Automation & Sequences',
-        description: 'We create sophisticated email automation workflows and sequences that nurture leads, onboard customers, and drive conversions.',
+        id: 4,
+        title: 'Spark Subscriptions',
+        description: 'Newsletter strategies that keep your audience hooked and coming back for more valuable content.',
         icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z" />
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
             </svg>
         ),
+        accentColor: 'iridescent'
     },
     {
-        title: 'A/B Testing & Optimization',
-        description: 'Our data-driven approach includes rigorous testing and continuous optimization to maximize open rates, click-through rates, and conversions.',
+        id: 5,
+        title: 'Thunder Recovery',
+        description: 'Re-engagement campaigns that bring back inactive subscribers with a mighty boom.',
         icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
             </svg>
         ),
-        accentColor: true
+        accentColor: 'accent'
     },
     {
-        title: 'Deliverability & Compliance',
-        description: 'We ensure your emails not only convert but also reach the inbox consistently, adhering to best practices and compliance regulations.',
+        id: 6,
+        title: 'Voltage Analytics',
+        description: "Data-driven insights that illuminate what's working and what needs fine-tuning in your email strategy.",
         icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
             </svg>
         ),
-    },
+        accentColor: 'secondary'
+    }
 ];
 
-export default function Services() {
-    return (
-        <section id="services" className="py-24 bg-lightblue/20 relative">
-            {/* Background patterns - subtle for professional look */}
-            <div className="absolute inset-0 bg-dots"></div>
+// Helper function to generate the correct background class based on accent color
+const getIconBgClass = (accentColor: string): string => {
+    if (accentColor === 'iridescent') {
+        return 'bg-iridescent/10';
+    }
+    if (accentColor === 'secondary') {
+        return 'bg-secondary/10';
+    }
+    return 'bg-accent/10';
+};
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="section-heading">Our Services</h2>
-                    <p className="section-title">Comprehensive Email <span className="text-primary">Solutions</span></p>
-                    <p className="section-subtitle">
-                        Everything you need to create, deploy, and optimize high-performing email campaigns that deliver results.
+// Helper function to generate the correct text color class based on accent color
+const getIconTextClass = (accentColor: string): string => {
+    if (accentColor === 'iridescent') return 'text-iridescent';
+    if (accentColor === 'secondary') return 'text-secondary';
+    return 'text-accent';
+};
+
+// Type definition for process step items
+interface ProcessStep {
+    step: string;
+    title: string;
+    description: string;
+    color: 'iridescent' | 'secondary' | 'accent';
+}
+
+export default function Services() {
+    // Process step data
+    const processSteps: ProcessStep[] = [
+        {
+            step: '01',
+            title: 'Discover',
+            description: 'We dig deep to understand your brand vibe, audience groove, and business goals',
+            color: 'iridescent'
+        },
+        {
+            step: '02',
+            title: 'Design',
+            description: 'We craft your email strategy and messaging framework with funky fresh ideas',
+            color: 'accent'
+        },
+        {
+            step: '03',
+            title: 'Create',
+            description: 'We write copy that flows with rhythmic words and captivating hooks',
+            color: 'secondary'
+        },
+        {
+            step: '04',
+            title: 'Amplify',
+            description: 'We optimize and refine based on results to keep your emails grooving',
+            color: 'iridescent'
+        }
+    ];
+
+    // Helper function for process step colors
+    const getProcessStepClasses = (color: string): string => {
+        if (color === 'iridescent') return 'bg-iridescent text-light';
+        if (color === 'secondary') return 'bg-secondary text-light';
+        return 'bg-accent text-light';
+    };
+
+    return (
+        <section id="services" className="py-24 bg-white">
+            <div className="container-padded">
+                <div className="text-center mb-16">
+                    <h2 className="text-sm uppercase tracking-wider text-iridescent font-medium mb-2">Our Services</h2>
+                    <h3 className="text-3xl font-medium text-dark mb-4">Email Services That Convert</h3>
+                    <p className="text-slate max-w-2xl mx-auto">
+                        We craft email campaigns that captivate, engage, and convert. Our copywriting
+                        services are designed to energize your audience and amplify your results.
                     </p>
                 </div>
 
-                <div className="mt-16 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className="group transition-all duration-300 card card-hover"
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                    {services.map((service) => (
+                        <motion.div
+                            key={service.id}
+                            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                            className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
                         >
-                            <div className="flex items-start p-2">
-                                <div className={`shrink-0 mr-4 mt-1 w-10 h-10 flex items-center justify-center rounded-sm ${service.accentColor ? 'bg-accent/10 text-accent' : 'bg-primary/10 text-primary'}`}>
+                            <div className={`w-12 h-12 rounded-md flex items-center justify-center mb-4 ${getIconBgClass(service.accentColor)}`}>
+                                <div className={getIconTextClass(service.accentColor)}>
                                     {service.icon}
                                 </div>
-                                <div>
-                                    <h3 className="text-lg font-medium text-dark mb-2 group-hover:text-primary transition-colors duration-300">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-dark/70 leading-relaxed">
-                                        {service.description}
-                                    </p>
-                                </div>
                             </div>
-                        </div>
+                            <h3 className="text-xl font-medium mb-2 text-dark">
+                                {service.title}
+                            </h3>
+                            <p className="text-slate text-sm">
+                                {service.description}
+                            </p>
+                        </motion.div>
                     ))}
+                </div>
+
+                {/* Process Section */}
+                <div className="mt-24 pt-16 border-t border-slate/10">
+                    <div className="text-center mb-16">
+                        <h2 className="text-sm uppercase tracking-wider text-iridescent font-medium mb-2">Our Process</h2>
+                        <h3 className="text-3xl font-medium text-dark mb-4">How We Work</h3>
+                        <p className="text-slate max-w-2xl mx-auto">
+                            Our streamlined process takes your email marketing from concept to conversion
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {processSteps.map((step, index) => (
+                            <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                                <div className={`w-10 h-10 rounded-md ${getProcessStepClasses(step.color)} flex items-center justify-center mb-4 text-sm font-medium`}>
+                                    {step.step}
+                                </div>
+                                <h3 className="text-lg font-medium mb-2 text-dark">{step.title}</h3>
+                                <p className="text-slate text-sm">{step.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* CTA */}
+                <div className="mt-24 py-12 px-6 bg-light rounded-lg text-center">
+                    <h3 className="text-2xl font-medium mb-4 text-dark">Ready to transform your email marketing?</h3>
+                    <p className="text-slate mb-8 max-w-2xl mx-auto">
+                        Let&apos;s create email campaigns that resonate with your audience and drive results that will make your business succeed.
+                    </p>
+                    <a href="#contact" className="btn bg-iridescent text-light hover:bg-iridescent-dark inline-flex items-center">
+                        Get Started
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>

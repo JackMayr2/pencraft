@@ -1,43 +1,27 @@
-import React from 'react';
-import type { Metadata } from "next";
-import { Space_Mono, Poppins } from "next/font/google";
-import "./globals.css";
-
-const spaceMono = Space_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-space-mono",
-});
+import './globals.css';
+import type { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-avant-garde',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Pigeon Pipeline | Expert Email Copywriting Services",
-  description: "Pigeon Pipeline streamlines your email marketing with high-converting, strategic campaigns that flow smoothly from your business to your audience's inbox.",
-  keywords: "email copywriting, email marketing, email campaigns, conversion optimization, Jack Mayr, JP Jeanes, Pigeon Pipeline, email strategy",
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/pigeon_logo.svg', type: 'image/svg+xml' }
-    ],
-    apple: '/pigeon_logo.svg',
-  },
+  title: 'ZappaFly - Email Copywriting That Converts',
+  description: 'Transform boring emails into high-converting messages that your audience will love.',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className={`scroll-smooth ${spaceMono.variable} ${poppins.variable}`}>
-      <body className="antialiased bg-light text-dark font-body">
+    <html lang="en" className={`${poppins.variable} scroll-smooth`}>
+      <body className="min-h-screen antialiased overflow-x-hidden">
         {children}
       </body>
     </html>
