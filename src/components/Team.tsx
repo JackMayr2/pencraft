@@ -52,7 +52,7 @@ const specialties = [
 
 export default function Team() {
     return (
-        <section id="team" className="py-24 bg-light relative">
+        <section id="team" className="section-padding bg-light">
             <div className="container-padded">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-sm uppercase tracking-wider text-iridescent font-medium mb-2">Our Team</h2>

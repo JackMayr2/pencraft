@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="450" fill="#1A1A1A"/>
+    
+    <!-- Decorative Elements -->
+    <circle cx="400" cy="225" r="200" fill="#00FF00" opacity="0.1"/>
+    <circle cx="400" cy="225" r="150" fill="#00FF00" opacity="0.05"/>
+    
+    <!-- Launch Countdown -->
+    <rect x="250" y="150" width="300" height="200" rx="8" fill="#2A2A2A"/>
+    
+    <!-- Countdown Timer -->
+    <text x="400" y="200" fill="#00FF00" font-family="Arial" font-size="48" text-anchor="middle">48:00</text>
+    
+    <!-- Launch Status -->
+    <rect x="300" y="220" width="200" height="40" rx="20" fill="#00FF00" opacity="0.2"/>
+    <text x="400" y="245" fill="#FFFFFF" font-family="Arial" font-size="16" text-anchor="middle">Launching Soon!</text>
+    
+    <!-- Pre-order Button -->
+    <rect x="300" y="280" width="200" height="50" rx="25" fill="#00FF00"/>
+    <text x="400" y="310" fill="#000000" font-family="Arial" font-size="16" text-anchor="middle">Pre-order Now</text>
+    
+    <!-- Header -->
+    <text x="400" y="120" fill="#FFFFFF" font-family="Arial" font-size="24" text-anchor="middle">New Product Launch</text>
+</svg> 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="450" fill="#1A1A1A"/>
+    
+    <!-- Decorative Elements -->
+    <circle cx="400" cy="225" r="200" fill="#00FF00" opacity="0.1"/>
+    <circle cx="400" cy="225" r="150" fill="#00FF00" opacity="0.05"/>
+    
+    <!-- Shopping Cart -->
+    <rect x="300" y="150" width="200" height="200" rx="8" fill="#2A2A2A"/>
+    
+    <!-- Cart Items -->
+    <rect x="320" y="170" width="160" height="40" rx="4" fill="#333333"/>
+    <rect x="320" y="220" width="160" height="40" rx="4" fill="#333333"/>
+    <rect x="320" y="270" width="160" height="40" rx="4" fill="#333333"/>
+    
+    <!-- Price Tags -->
+    <rect x="320" y="320" width="160" height="30" rx="4" fill="#00FF00" opacity="0.2"/>
+    <text x="400" y="340" fill="#FFFFFF" font-family="Arial" font-size="14" text-anchor="middle">Total: $299.99</text>
+    
+    <!-- Recovery Message -->
+    <text x="400" y="100" fill="#FFFFFF" font-family="Arial" font-size="20" text-anchor="middle">Don't forget your cart!</text>
+    <text x="400" y="130" fill="#00FF00" font-family="Arial" font-size="16" text-anchor="middle">Use code: RECOVER20 for 20% off</text>
+</svg> 

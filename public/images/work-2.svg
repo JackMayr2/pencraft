@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="450" fill="#1A1A1A"/>
+    
+    <!-- Decorative Elements -->
+    <circle cx="400" cy="225" r="200" fill="#00FF00" opacity="0.1"/>
+    <circle cx="400" cy="225" r="150" fill="#00FF00" opacity="0.05"/>
+    
+    <!-- Tree Icon -->
+    <g transform="translate(300, 125)">
+        <!-- Tree Trunk -->
+        <rect x="175" y="180" width="50" height="40" fill="#00FF00"/>
+        
+        <!-- Tree Body -->
+        <path d="M200 180 L150 100 L250 100 Z" fill="#00FF00"/>
+        
+        <!-- Growth Lines -->
+        <line x1="200" y1="120" x2="200" y2="80" stroke="#00FF00" stroke-width="2"/>
+    </g>
+</svg> 

@@ -101,7 +101,7 @@ export default function Contact() {
     ];
 
     return (
-        <section id="contact" className="py-24 bg-light">
+        <section id="contact" className="section-padding bg-light">
             <div className="container-padded">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-sm uppercase tracking-wider text-iridescent font-medium mb-2">Contact Us</h2>

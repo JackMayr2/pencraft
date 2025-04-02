@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="450" fill="#1A1A1A"/>
+    
+    <!-- Decorative Elements -->
+    <circle cx="400" cy="225" r="200" fill="#00FF00" opacity="0.1"/>
+    <circle cx="400" cy="225" r="150" fill="#00FF00" opacity="0.05"/>
+    
+    <!-- Re-engagement Card -->
+    <rect x="250" y="150" width="300" height="200" rx="8" fill="#2A2A2A"/>
+    
+    <!-- Welcome Back Message -->
+    <text x="400" y="190" fill="#FFFFFF" font-family="Arial" font-size="24" text-anchor="middle">Welcome Back!</text>
+    
+    <!-- Special Offer -->
+    <rect x="300" y="210" width="200" height="60" rx="4" fill="#00FF00" opacity="0.2"/>
+    <text x="400" y="240" fill="#FFFFFF" font-family="Arial" font-size="18" text-anchor="middle">Special Offer</text>
+    <text x="400" y="260" fill="#FFFFFF" font-family="Arial" font-size="14" text-anchor="middle">Just for returning customers</text>
+    
+    <!-- CTA Button -->
+    <rect x="300" y="290" width="200" height="40" rx="20" fill="#00FF00"/>
+    <text x="400" y="315" fill="#000000" font-family="Arial" font-size="14" text-anchor="middle">Redeem Offer</text>
+    
+    <!-- Header -->
+    <text x="400" y="120" fill="#FFFFFF" font-family="Arial" font-size="20" text-anchor="middle">Re-engagement Campaign</text>
+</svg> 

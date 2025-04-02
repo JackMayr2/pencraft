@@ -16,41 +16,41 @@ interface ServiceItem {
 const services: ServiceItem[] = [
     {
         id: 1,
-        title: 'Power Surge Sequences',
-        description: 'Automated email sequences that energize your audience from the first open to the final conversion.',
+        title: 'Welcome Sequences',
+        description: 'Engaging email sequences that introduce new subscribers to your brand and build lasting relationships.',
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
         ),
         accentColor: 'iridescent'
     },
     {
         id: 2,
-        title: 'Electric Engagement',
-        description: 'Content that sparks genuine interest and meaningful conversations with your subscribers.',
+        title: 'Engagement Campaigns',
+        description: 'Content that resonates with your audience and fosters meaningful connections with your subscribers.',
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
         ),
         accentColor: 'accent'
     },
     {
         id: 3,
-        title: 'Lightning Launches',
-        description: 'High-impact email campaigns that get your products and offers to market with maximum velocity.',
+        title: 'Product Launches',
+        description: 'Strategic email campaigns that generate excitement and drive sales for your new products and offers.',
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
             </svg>
         ),
         accentColor: 'secondary'
     },
     {
         id: 4,
-        title: 'Spark Subscriptions',
-        description: 'Newsletter strategies that keep your audience hooked and coming back for more valuable content.',
+        title: 'Newsletter Strategy',
+        description: 'Consistent, valuable content that keeps your audience engaged and coming back for more.',
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
@@ -60,8 +60,8 @@ const services: ServiceItem[] = [
     },
     {
         id: 5,
-        title: 'Thunder Recovery',
-        description: 'Re-engagement campaigns that bring back inactive subscribers with a mighty boom.',
+        title: 'Re-engagement Campaigns',
+        description: 'Strategic campaigns that bring inactive subscribers back into your active audience.',
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -71,8 +71,8 @@ const services: ServiceItem[] = [
     },
     {
         id: 6,
-        title: 'Voltage Analytics',
-        description: "Data-driven insights that illuminate what's working and what needs fine-tuning in your email strategy.",
+        title: 'Performance Analytics',
+        description: "Data-driven insights that help optimize your email strategy and improve results.",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -102,7 +102,7 @@ const getIconTextClass = (accentColor: string): string => {
 
 export default function Services() {
     return (
-        <section id="services" className="py-24 bg-white">
+        <section id="services" className="section-padding bg-light">
             <div className="container-padded">
                 <div className="text-center mb-16">
                     <h2 className="text-sm uppercase tracking-wider text-iridescent font-medium mb-2">Our Services</h2>

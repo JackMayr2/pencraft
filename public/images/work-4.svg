@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="450" fill="#1A1A1A"/>
+    
+    <!-- Decorative Elements -->
+    <circle cx="400" cy="225" r="200" fill="#00FF00" opacity="0.1"/>
+    <circle cx="400" cy="225" r="150" fill="#00FF00" opacity="0.05"/>
+    
+    <!-- Handshake Icon -->
+    <g transform="translate(300, 125)">
+        <!-- Left Hand -->
+        <path d="M100 150 L120 130 L140 150 L120 170 Z" fill="#00FF00"/>
+        
+        <!-- Right Hand -->
+        <path d="M260 150 L280 130 L300 150 L280 170 Z" fill="#00FF00"/>
+        
+        <!-- Handshake Connection -->
+        <path d="M140 150 L200 150 L260 150" stroke="#00FF00" stroke-width="4"/>
+    </g>
+</svg> 

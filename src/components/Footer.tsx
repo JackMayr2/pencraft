@@ -42,7 +42,7 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-2 lg:col-span-1">
                         <div className="flex items-center mb-6">
                             <div className="w-12 h-12 bg-iridescent flex items-center justify-center rounded-md mr-3">
-                                <Image src="/fly_logo.svg" alt="ZappaFly Logo" width={40} height={40} />
+                                <Image src="/new_fly_logo.svg" alt="ZappaFly Logo" width={40} height={40} />
                             </div>
                             <span className="text-xl font-medium">
                                 Zappa<span className="text-iridescent">Fly</span>
