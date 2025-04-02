@@ -44,8 +44,8 @@ export default function Footer() {
                             <div className="w-12 h-12 bg-iridescent flex items-center justify-center rounded-md mr-3">
                                 <Image src="/new_fly_logo.svg" alt="ZappaFly Logo" width={40} height={40} />
                             </div>
-                            <span className="text-xl font-medium">
-                                Zappa<span className="text-iridescent">Fly</span>
+                            <span className="text-xl font-medium text-iridescent">
+                                ZappaFly
                             </span>
                         </div>
                         <p className="text-light/70 mb-6 max-w-xs text-sm">
