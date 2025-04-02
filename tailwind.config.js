@@ -50,9 +50,9 @@ module.exports = {
                 },
             },
             fontFamily: {
-                sans: ['Sk-Modernist', 'system-ui', 'sans-serif'],
-                heading: ['Sk-Modernist', 'system-ui', 'sans-serif'],
-                body: ['Sk-Modernist', 'system-ui', 'sans-serif'],
+                sans: ['Poppins', 'system-ui', 'sans-serif'],
+                heading: ['Poppins', 'system-ui', 'sans-serif'],
+                body: ['Poppins', 'system-ui', 'sans-serif'],
                 'avant-garde': ['var(--font-avant-garde)', 'Poppins', 'sans-serif'],
             },
             backgroundColor: {

@@ -17,7 +17,7 @@ const services: ServiceItem[] = [
     {
         id: 1,
         title: 'Welcome Sequences',
-        description: 'Engaging email sequences that introduce new subscribers to your brand and build lasting relationships.',
+        description: 'Engaging email sequences that introduce new customers to your brand and build lasting relationships.',
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -28,7 +28,7 @@ const services: ServiceItem[] = [
     {
         id: 2,
         title: 'Engagement Campaigns',
-        description: 'Content that resonates with your audience and fosters meaningful connections with your subscribers.',
+        description: 'Content that resonates with your audience and fosters meaningful connections with your customers.',
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -61,7 +61,7 @@ const services: ServiceItem[] = [
     {
         id: 5,
         title: 'Re-engagement Campaigns',
-        description: 'Strategic campaigns that bring inactive subscribers back into your active audience.',
+        description: 'Strategic campaigns that bring inactive customers back into your active audience.',
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />

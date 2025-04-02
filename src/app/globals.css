@@ -4,18 +4,19 @@
 
 @import '../styles/custom.css';
 
-/* Import Sk-Modernist font */
+/* Import Avant Guard font */
 @font-face {
-  font-family: 'Sk-Modernist';
-  src: url('/Sk-Modernist/Sk-Modernist.woff2') format('woff2'),
-    url('/Sk-Modernist/Sk-Modernist.ttf') format('truetype');
+  font-family: 'Avant Guard';
+  src: url('/Avant Guard/Avant Guard.woff2') format('woff2'),
+    url('/Avant Guard/Avant Guard.woff') format('woff'),
+    url('/Avant Guard/Avant Guard.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --font-sans: 'Sk-Modernist', system-ui, sans-serif;
+  --font-sans: 'Poppins', system-ui, sans-serif;
   --font-visby: 'Visby CF', sans-serif;
 
   /* Color Palette */
