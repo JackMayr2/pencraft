@@ -67,7 +67,7 @@ export default function Team() {
                         <div key={index} className="transition-shadow duration-300 hover:shadow-md">
                             <div className="bg-white p-6 rounded-lg overflow-hidden">
                                 <div className="flex flex-col md:flex-row items-start gap-6">
-                                    <div className={`w-16 h-16 flex-shrink-0 rounded-md ${index === 0 ? 'bg-iridescent' : 'bg-secondary'
+                                    <div className={`w-16 h-16 flex-shrink-0 rounded-md ${index === 0 ? 'bg-secondary' : 'bg-secondary'
                                         } flex items-center justify-center`}>
                                         <span className="text-lg font-medium text-light">
                                             {member.name.split(' ').map(name => name[0]).join('')}
@@ -77,7 +77,7 @@ export default function Team() {
                                         <h3 className="text-xl font-medium text-dark">
                                             {member.name}
                                         </h3>
-                                        <p className={`text-sm mt-1 ${index === 0 ? 'text-iridescent' : 'text-secondary'
+                                        <p className={`text-sm mt-1 ${index === 0 ? 'text-secondary' : 'text-secondary'
                                             }`}>
                                             {member.position}
                                         </p>

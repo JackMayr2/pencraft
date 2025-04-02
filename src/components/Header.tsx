@@ -40,7 +40,7 @@ export default function Header() {
                                 <Image src="/new_fly_logo.svg" alt="ZappaFly Logo" width={40} height={40} />
                             </div>
                             <span className="text-xl font-medium tracking-tight">
-                                <span className={isScrolled ? 'text-light' : 'text-light'}>ZappaFly</span>
+                                <span className={isScrolled ? 'text-iridescent' : 'text-light'}>ZappaFly</span>
                             </span>
                         </div>
                     </Link>
