@@ -5,12 +5,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 interface SectionTransitionProps {
-    isVisible: boolean;
     startPosition: { x: number; y: number };
     endPosition: { x: number; y: number };
 }
 
-export default function SectionTransition({ isVisible, startPosition, endPosition }: SectionTransitionProps) {
+export default function SectionTransition({ startPosition, endPosition }: SectionTransitionProps) {
     const [position, setPosition] = useState(startPosition);
     const [mousePosition, setMousePosition] = useState(endPosition);
     const [rotation, setRotation] = useState(0);

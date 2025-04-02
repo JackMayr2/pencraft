@@ -13,7 +13,6 @@ import SectionTransition from '@/components/SectionTransition';
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('hero');
-  const [showTransition, setShowTransition] = useState(false);
   const [transitionPositions, setTransitionPositions] = useState({
     start: { x: 0, y: 0 },
     end: { x: 0, y: 0 }
@@ -44,10 +43,8 @@ export default function Home() {
                     y: endRect.top + endRect.height / 2
                   }
                 });
-                setShowTransition(true);
                 setTimeout(() => {
                   setCurrentSection(section);
-                  setShowTransition(false);
                 }, 1000);
               }
             }
@@ -65,7 +62,6 @@ export default function Home() {
     <main className="relative">
       <Header />
       <SectionTransition
-        isVisible={showTransition}
         startPosition={transitionPositions.start}
         endPosition={transitionPositions.end}
       />
