@@ -23,15 +23,16 @@ export default function Hero() {
 
             {/* Content */}
             <div className="container-padded relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-[5.5rem] items-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="mb-8"
+                        className="mb-8 pr-8"
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-dark">
-                            Buzz-Worthy Emails, Every Time.
+                            <span className="whitespace-nowrap">Buzz-Worthy Emails,</span><br />
+                            Every Time.
                         </h1>
                         <p className="text-lg md:text-xl text-slate mb-8 max-w-2xl">
                             We transform boring emails into high-converting messages that your customers will love. Our electrifying copywriting approach combines creativity with proven strategies to help your business soar.
