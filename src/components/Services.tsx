@@ -106,7 +106,7 @@ export default function Services() {
             <div className="container-padded">
                 <div className="text-center mb-16">
                     <h2 className="text-sm uppercase tracking-wider text-iridescent font-medium mb-2">Our Services</h2>
-                    <h3 className="text-3xl font-medium text-dark mb-4">Email Services That Convert</h3>
+                    <h3 className="text-3xl font-medium text-dark mb-4">Emails That Convert</h3>
                     <p className="text-slate max-w-2xl mx-auto">
                         We craft email campaigns that captivate, engage, and convert. Our copywriting
                         services are designed to energize your audience and amplify your results.
