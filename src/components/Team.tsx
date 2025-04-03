@@ -11,13 +11,13 @@ const teamMembers: TeamMember[] = [
     {
         name: 'Jack Mayr',
         position: 'Co-Founder & Email Strategist',
-        bio: 'With over 10 years of experience in digital marketing, Jack specializes in crafting email strategies that convert. He has helped businesses across various industries increase their email ROI by an average of 250%.',
+        bio: 'A digital marketing specialist with a proven track record in crafting email strategies that convert. Jack has helped businesses across various industries transform their email marketing from basic newsletters into powerful revenue drivers.',
         image: '/images/team-jack.png'
     },
     {
         name: 'JP Jeanes',
         position: 'Co-Founder & Creative Director',
-        bio: "JP Jeanes is a strategic copywriter with a knack for turning complex ideas into compelling narratives. With a background in technical writing and creative direction, JP crafts copy that not only engages but drives measurable results. When not writing, you'll find JP exploring the latest in AI technology and experimenting with new writing techniques.",
+        bio: "A strategic copywriter with a knack for turning complex ideas into compelling narratives. JP combines technical expertise with creative direction to craft copy that not only engages but drives measurable results. His approach focuses on creating authentic connections between brands and their audiences.",
         image: '/images/team-jp.png'
     },
 ];

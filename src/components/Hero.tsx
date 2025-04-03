@@ -32,10 +32,10 @@ export default function Hero() {
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-dark">
                             <span className="whitespace-nowrap">Buzzworthy emails,</span><br />
-                            <span className="mt-2 block">every time.</span>
+                            every time.
                         </h1>
                         <p className="text-lg md:text-xl text-slate mb-8 max-w-2xl">
-                            We transform boring emails into high-converting messages that your customers will love. Our electrifying copywriting approach combines creativity with proven strategies to help your business soar.
+                            We transform boring emails into high-converting messages that your customers will love. Through creative storytelling and data-driven strategy, every send makes an impact.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link href="#contact">
