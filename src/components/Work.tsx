@@ -134,13 +134,6 @@ const Work: React.FC = () => {
                                         </div>
                                     ))}
                                 </div>
-
-                                {/* View Project Button */}
-                                <div className="mt-6">
-                                    <button className="w-full py-2 px-4 rounded-full bg-iridescent text-light hover:bg-iridescent-light transition-colors duration-300">
-                                        View Case Study
-                                    </button>
-                                </div>
                             </div>
                         </motion.div>
                     ))}

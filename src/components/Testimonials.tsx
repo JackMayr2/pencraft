@@ -41,7 +41,7 @@ export default function Testimonials() {
                     <h2 className="text-sm uppercase tracking-wider text-iridescent font-medium mb-2">Testimonials</h2>
                     <h3 className="text-3xl font-medium text-dark mb-4">What Our Clients Say</h3>
                     <p className="text-slate max-w-2xl mx-auto">
-                        Don't just take our word for it. Here's what our clients have to say about working with us.
+                        Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
                     </p>
                 </div>
 
@@ -57,7 +57,7 @@ export default function Testimonials() {
                         >
                             <div className="relative">
                                 <div className="absolute -top-4 -left-4 text-4xl text-iridescent/20 font-serif">
-                                    "
+                                    &ldquo;
                                 </div>
                                 <p className="text-slate mb-6 relative z-10">
                                     {testimonial.quote}
