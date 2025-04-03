@@ -31,7 +31,7 @@ export default function Hero() {
                         className="mb-8"
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-dark">
-                            Zap Your Emails to Life with <span className="text-iridescent">ZappaFly</span>
+                            Buzz-Worthy Emails, Every Time.
                         </h1>
                         <p className="text-lg md:text-xl text-slate mb-8 max-w-2xl">
                             We transform boring emails into high-converting messages that your customers will love. Our electrifying copywriting approach combines creativity with proven strategies to help your business soar.
