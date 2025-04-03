@@ -56,7 +56,7 @@ export default function Testimonials() {
                             className="bg-white p-6 rounded-lg shadow-sm"
                         >
                             <div className="relative">
-                                <div className="absolute -top-4 -left-4 text-4xl text-iridescent/20 font-serif">
+                                <div className="absolute -top-6 -left-6 text-6xl text-iridescent/40 font-serif">
                                     &ldquo;
                                 </div>
                                 <p className="text-slate mb-6 relative z-10">
