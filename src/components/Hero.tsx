@@ -31,8 +31,8 @@ export default function Hero() {
                         className="mb-8 pr-8"
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-dark">
-                            <span className="whitespace-nowrap">Buzz-Worthy Emails,</span><br />
-                            Every Time.
+                            <span className="whitespace-nowrap">Buzzworthy Emails.</span><br />
+                            <span className="mt-2 block">Every Time.</span>
                         </h1>
                         <p className="text-lg md:text-xl text-slate mb-8 max-w-2xl">
                             We transform boring emails into high-converting messages that your customers will love. Our electrifying copywriting approach combines creativity with proven strategies to help your business soar.
