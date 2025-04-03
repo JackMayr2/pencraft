@@ -40,7 +40,7 @@ export default function Testimonials() {
                 <div className="text-center mb-16">
                     <h2 className="text-sm uppercase tracking-wider text-iridescent font-medium mb-2">Testimonials</h2>
                     <h3 className="text-3xl font-medium text-dark mb-4">What Our Clients Say</h3>
-                    <p className="text-slate max-w-2xl mx-auto">
+                    <p className="text-slate max-w-3xl mx-auto">
                         Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
                     </p>
                 </div>
