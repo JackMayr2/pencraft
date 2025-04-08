@@ -36,11 +36,13 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-2 lg:col-span-1">
                         <div className="flex items-center mb-6">
                             <Image
-                                src="/images/green_fly_icon.svg"
+                                src="/images/green_fly_icon.png"
                                 alt="ZappaFly Logo"
                                 width={48}
                                 height={48}
+                                quality={95}
                                 className="mr-3"
+                                style={{ objectFit: 'contain' }}
                             />
                             <span className="text-xl font-medium text-iridescent">
                                 ZappaFly

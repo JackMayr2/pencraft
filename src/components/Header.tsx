@@ -37,11 +37,13 @@ export default function Header() {
                     <Link href="/" className="relative z-10">
                         <div className="flex items-center">
                             <Image
-                                src="/images/green_fly_icon.svg"
+                                src="/images/green_fly_icon.png"
                                 alt="ZappaFly Logo"
                                 width={48}
                                 height={48}
+                                quality={95}
                                 className="mr-3"
+                                style={{ objectFit: 'contain' }}
                             />
                             <span className="text-xl font-medium tracking-tight">
                                 <span className={isScrolled ? 'text-iridescent' : 'text-light'}>ZappaFly</span>
