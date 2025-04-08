@@ -35,9 +35,13 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="col-span-1 md:col-span-2 lg:col-span-1">
                         <div className="flex items-center mb-6">
-                            <div className="w-12 h-12 bg-iridescent flex items-center justify-center rounded-md mr-3">
-                                <Image src="/new_fly_logo.svg" alt="ZappaFly Logo" width={40} height={40} />
-                            </div>
+                            <Image
+                                src="/images/green_fly_icon.svg"
+                                alt="ZappaFly Logo"
+                                width={48}
+                                height={48}
+                                className="mr-3"
+                            />
                             <span className="text-xl font-medium text-iridescent">
                                 ZappaFly
                             </span>

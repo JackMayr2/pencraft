@@ -41,8 +41,6 @@ export default function Header() {
                                 alt="ZappaFly Logo"
                                 width={48}
                                 height={48}
-                                quality={100}
-                                priority
                                 className="mr-3"
                             />
                             <span className="text-xl font-medium tracking-tight">
