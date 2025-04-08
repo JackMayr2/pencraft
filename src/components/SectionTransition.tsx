@@ -16,34 +16,64 @@ export default function SectionTransition({ startPosition, endPosition }: Sectio
     const [isDead, setIsDead] = useState(false);
     const [deathPosition, setDeathPosition] = useState({ x: 0, y: 0 });
     const [showSwatter, setShowSwatter] = useState(false);
+    const [isMobile, setIsMobile] = useState(true);
+    const [showFly, setShowFly] = useState(false);
+    const mouseTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     const animationFrameRef = useRef<number | null>(null);
     const lastTimeRef = useRef(performance.now());
     const positionRef = useRef(position);
+
+    // Check if device is mobile
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     // Update position ref when position changes
     useEffect(() => {
         positionRef.current = position;
     }, [position]);
 
-    // Track mouse position
+    // Track mouse position and movement
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
+            if (isMobile) return;
+
             setMousePosition({
                 x: e.clientX,
                 y: e.clientY
             });
+
+            setShowFly(true);
+
+            // Reset the timeout on each mouse move
+            if (mouseTimeoutRef.current) {
+                clearTimeout(mouseTimeoutRef.current);
+            }
+
+            // Hide fly after 2 seconds of no mouse movement
+            mouseTimeoutRef.current = setTimeout(() => {
+                setShowFly(false);
+            }, 2000);
         };
 
         window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, []);
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+            if (mouseTimeoutRef.current) {
+                clearTimeout(mouseTimeoutRef.current);
+            }
+        };
+    }, [isMobile]);
 
     // Handle death sequence
     useEffect(() => {
         if (isDead) {
-            // Set death position to current position
             setDeathPosition(position);
-            // Stop the animation loop
             if (animationFrameRef.current) {
                 cancelAnimationFrame(animationFrameRef.current);
             }
@@ -52,6 +82,8 @@ export default function SectionTransition({ startPosition, endPosition }: Sectio
 
     // Move fly towards mouse
     useEffect(() => {
+        if (isMobile || !showFly) return;
+
         const moveSpeed = 4;
         const rotationSpeed = 0.5;
 
@@ -61,23 +93,19 @@ export default function SectionTransition({ startPosition, endPosition }: Sectio
             const deltaTime = Math.min(currentTime - lastTimeRef.current, 16.67);
             lastTimeRef.current = currentTime;
 
-            // Calculate direction to mouse
             const dx = mousePosition.x - positionRef.current.x;
             const dy = mousePosition.y - positionRef.current.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance > 0) {
-                // Calculate movement with smoother transitions
                 const moveAmount = Math.min(moveSpeed * (deltaTime / 16.67), distance);
                 const ratio = moveAmount / distance;
 
-                // Update position with easing
                 const newX = positionRef.current.x + dx * ratio;
                 const newY = positionRef.current.y + dy * ratio;
                 positionRef.current = { x: newX, y: newY };
                 setPosition({ x: newX, y: newY });
 
-                // Calculate rotation with smoother transitions
                 const targetRotation = Math.atan2(dy, dx) * (180 / Math.PI) - 90 + 180;
                 const currentRotation = rotation;
                 const rotationDiff = ((targetRotation - currentRotation + 180) % 360) - 180;
@@ -94,22 +122,23 @@ export default function SectionTransition({ startPosition, endPosition }: Sectio
                 cancelAnimationFrame(animationFrameRef.current);
             }
         };
-    }, [mousePosition, isDead, rotation]);
+    }, [mousePosition, isDead, rotation, isMobile, showFly]);
 
-    // Handle click on fly
     const handleFlyClick = () => {
         if (!isDead) {
             setShowSwatter(true);
             setIsDead(true);
-            // Hide swatter after animation
             setTimeout(() => setShowSwatter(false), 1000);
         }
     };
 
+    if (isMobile) return null;
+
     return (
         <motion.div
             initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: showFly ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
             className="fixed inset-0 pointer-events-none z-50"
         >
             <motion.div
@@ -148,7 +177,6 @@ export default function SectionTransition({ startPosition, endPosition }: Sectio
                 </motion.div>
             </motion.div>
 
-            {/* Fly Swatter */}
             {showSwatter && (
                 <motion.div
                     className="absolute pointer-events-none"

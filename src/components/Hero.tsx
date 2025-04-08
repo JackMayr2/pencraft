@@ -10,12 +10,12 @@ export default function Hero() {
             {/* Colorful Background */}
             <div className="absolute inset-0 overflow-hidden">
                 {/* Main gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-iridescent via-secondary to-accent opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-iridescent via-iridescent/60 to-iridescent/40 opacity-40"></div>
 
                 {/* Animated color blocks */}
                 <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-iridescent rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
-                <div className="absolute bottom-0 left-1/2 w-[600px] h-[600px] bg-accent rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-iridescent rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
+                <div className="absolute bottom-0 left-1/2 w-[600px] h-[600px] bg-iridescent rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
 
                 {/* Shimmering overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
