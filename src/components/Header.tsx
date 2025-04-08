@@ -36,16 +36,15 @@ export default function Header() {
                     {/* Logo */}
                     <Link href="/" className="relative z-10">
                         <div className="flex items-center">
-                            <div className={`w-12 h-12 flex items-center justify-center rounded-md mr-3 transition-all duration-300 ${isScrolled ? 'bg-iridescent' : 'bg-iridescent'}`}>
-                                <Image
-                                    src="/new_fly_logo.svg"
-                                    alt="ZappaFly Logo"
-                                    width={40}
-                                    height={40}
-                                    quality={100}
-                                    priority
-                                />
-                            </div>
+                            <Image
+                                src="/images/green_fly_icon.svg"
+                                alt="ZappaFly Logo"
+                                width={48}
+                                height={48}
+                                quality={100}
+                                priority
+                                className="mr-3"
+                            />
                             <span className="text-xl font-medium tracking-tight">
                                 <span className={isScrolled ? 'text-iridescent' : 'text-light'}>ZappaFly</span>
                             </span>
