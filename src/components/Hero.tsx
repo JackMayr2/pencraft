@@ -10,15 +10,15 @@ export default function Hero() {
             {/* Colorful Background */}
             <div className="absolute inset-0 overflow-hidden">
                 {/* Main gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-iridescent via-iridescent/60 to-iridescent/40 opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-iridescent via-iridescent/60 to-iridescent/40 opacity-30"></div>
 
                 {/* Animated color blocks */}
-                <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-iridescent rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-iridescent rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
-                <div className="absolute bottom-0 left-1/2 w-[600px] h-[600px] bg-iridescent rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
+                <div className="absolute top-0 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-iridescent rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
+                <div className="absolute top-[20%] right-0 w-[250px] md:w-[600px] h-[250px] md:h-[600px] bg-iridescent rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
+                <div className="absolute -bottom-[10%] left-[40%] w-[275px] md:w-[600px] h-[275px] md:h-[600px] bg-iridescent rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
 
                 {/* Shimmering overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
             </div>
 
             {/* Content */}
@@ -35,7 +35,7 @@ export default function Hero() {
                             every time.
                         </h1>
                         <p className="text-lg md:text-xl text-slate mb-8 max-w-2xl">
-                            We transform boring emails into high-converting messages that your customers will love. Through creative storytelling and data-driven strategy, every send makes an impact.
+                            We transform boring emails into high-converting messages that your customers will love. Through creative storytelling and data-driven strategy, every email makes an impact.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link href="#contact">
