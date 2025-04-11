@@ -10,8 +10,26 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'ZappaFly - Email Copywriting That Converts',
-  description: 'Transform boring emails into high-converting messages that your audience will love.',
+  title: 'ZappaFly - Buzzworthy emails, every time.',
+  description: 'We transform boring emails into high-converting messages that your customers will love.',
+  openGraph: {
+    title: 'ZappaFly - Buzzworthy emails, every time.',
+    description: 'We transform boring emails into high-converting messages that your customers will love.',
+    images: [
+      {
+        url: '/images/green_fly_icon.png',
+        width: 800,
+        height: 800,
+        alt: 'ZappaFly Logo',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ZappaFly - Buzzworthy emails, every time.',
+    description: 'We transform boring emails into high-converting messages that your customers will love.',
+    images: ['/images/green_fly_icon.png'],
+  },
 };
 
 export default function RootLayout({
